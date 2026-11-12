@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sign in or create your GG Supply account." />
+    <meta name="theme-color" content="#11120e" />
+    <title>Your account — GG Supply</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="/assets/js/scroll-effects.js" defer></script>
+    <script src="/assets/js/account.js" defer></script>
+  </head>
+  <body class="storefront-page">
+    <div class="announcement"><p>LEVEL UP YOUR LOADOUT <span>—</span> NEW SEASON, NEW LOADOUT</p></div>
+
+    <header class="site-header">
+      <a class="wordmark" href="/" aria-label="GG Supply home">
+        <span class="wordmark-icon" aria-hidden="true">GG</span>
+        <span class="wordmark-name">SUPPLY<span class="wordmark-period">.</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span class="sr-only">Toggle navigation</span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a><a href="/shop">Shop</a><a href="/orders">Your orders</a><a href="/#story">Our game</a>
+      </nav>
+      <a class="bag-button" href="/shop#your-bag" aria-label="Open your bag" data-player-only hidden>
+        <span class="bag-label">Your bag</span><span class="bag-count" aria-live="polite">0</span>
+      </a>
+      <a class="account-button" href="/account" aria-current="page" aria-label="Open account">
+        <span class="account-button-label">Sign in</span><span class="account-avatar" aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main class="account-page section-wrap">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="/">Home</a><span aria-hidden="true">/</span><span aria-current="page">Account</span>
+      </nav>
+
+      <section class="account-layout" aria-label="Your GG Supply account" data-scroll-split>
+        <div class="account-promo">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> YOUR PLAYER PROFILE</span>
+          <h1>Same squad.<br />Your <span>own</span> loadout.</h1>
+          <p>Sign in to pick up where you left off, check your orders, and get ready for your next drop.</p>
+          <div class="account-promo-index">GG / PLAYER ACCESS</div>
+        </div>
+
+        <div class="account-card">
+          <section class="route-auth-panel" data-auth-panel="login">
+            <span class="eyebrow">WELCOME BACK</span>
+            <h2>Good to see you<span class="lime-period">.</span></h2>
+            <p class="account-intro">Sign in to check out and see your orders.</p>
+            <form class="auth-form" id="login-form">
+              <label for="login-email">Email address</label>
+              <input id="login-email" name="email" type="email" autocomplete="username" maxlength="254" required />
+              <label for="login-password">Password</label>
+              <input id="login-password" name="password" type="password" autocomplete="current-password" maxlength="128" required />
+              <p class="auth-message" aria-live="polite"></p>
+              <button class="button button-dark auth-submit" type="submit">Sign in <span aria-hidden="true">↗</span></button>
+            </form>
+            <p class="auth-switch">New around here? <a href="/account?view=register">Create an account</a></p>
+          </section>
+
+          <section class="route-auth-panel" data-auth-panel="register" hidden>
+            <span class="eyebrow">JOIN THE SQUAD</span>
+            <h2>Create your account<span class="lime-period">.</span></h2>
+            <p class="account-intro">Set up an account to check out and track your orders.</p>
+            <form class="auth-form" id="register-form">
+              <label for="register-email">Email address</label>
+              <input id="register-email" name="email" type="email" autocomplete="email" maxlength="254" required />
+              <label for="register-password">Password <span>10–128 characters</span></label>
+              <input id="register-password" name="password" type="password" autocomplete="new-password" minlength="10" maxlength="128" required />
+              <label for="admin-setup-key">Admin setup key <span>only if the site owner gave you one</span></label>
+              <input id="admin-setup-key" name="adminSetupKey" type="password" autocomplete="off" maxlength="256" />
+              <p class="auth-message" aria-live="polite"></p>
+              <button class="button button-dark auth-submit" type="submit">Create account <span aria-hidden="true">↗</span></button>
+            </form>
+            <p class="auth-switch">Already part of the squad? <a href="/account?view=login">Sign in</a></p>
+          </section>
+
+          <section class="route-auth-panel" data-auth-panel="account" hidden>
+            <span class="eyebrow">WELCOME TO THE SQUAD</span>
+            <h2>Your account<span class="lime-period">.</span></h2>
+            <p class="route-account-email"></p>
+            <span class="account-role"></span>
+            <a class="button button-dark route-admin-link" href="/admin" hidden>Open admin dashboard <span aria-hidden="true">↗</span></a>
+            <div class="route-account-links">
+              <a class="button button-dark" href="/orders">View your orders <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="/shop">Go to the shop <span aria-hidden="true">↗</span></a>
+            </div>
+              <p class="account-panel-message" role="status" aria-live="polite"></p>
+              <button class="account-logout" type="button">Sign out <span aria-hidden="true">↗</span></button>
+          </section>
+          <p class="account-page-message" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark" href="/" aria-label="GG Supply home">
+        <span class="wordmark-icon" aria-hidden="true">GG</span>
+        <span class="wordmark-name">SUPPLY<span class="wordmark-period">.</span></span>
+      </a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/shop">Shop</a>
+        <a href="/orders">Orders</a>
+        <a href="/account">Account</a>
+      </nav>
+      <p>Good game. Great fit. © <span class="current-year"></span> GG Supply.</p>
+      <a class="back-to-top" href="/">Back home ↑</a>
+    </footer>
+  </body>
+</html>

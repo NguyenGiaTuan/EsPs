@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Game-day energy. Everyday uniform. Discover competitive streetwear by GG Supply."
+    />
+    <meta name="theme-color" content="#11120e" />
+    <title>GG Supply — Made for the next round</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/scroll-effects.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+  </head>
+  <body class="storefront-page">
+    <div class="announcement">
+      <p>LEVEL UP YOUR LOADOUT <span>—</span> NEW SEASON, NEW LOADOUT</p>
+    </div>
+
+    <header class="site-header">
+      <a class="wordmark" href="#" aria-label="GG Supply home">
+        <span class="wordmark-icon" aria-hidden="true">GG</span>
+        <span class="wordmark-name">SUPPLY<span class="wordmark-period">.</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="/" aria-current="page">Home</a>
+        <a href="/shop">Shop</a>
+        <a href="/orders">Your orders</a>
+        <a href="#story">Our game</a>
+      </nav>
+
+      <button class="bag-button" type="button" aria-label="Open shopping bag" data-player-only hidden>
+        <span class="bag-label">Your bag</span>
+        <span class="bag-count" aria-live="polite">0</span>
+      </button>
+      <a class="account-button" href="/account" aria-label="Open account">
+        <span class="account-button-label">Sign in</span>
+        <span class="account-avatar" aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> BUILT FOR THE MAIN CHARACTER</div>
+          <h1 id="hero-title">Play loud.<br /><span class="hero-tagline">Wear <span>louder.</span></span></h1>
+          <p>
+            Esports energy, off-screen style. Your next favorite fit just dropped.
+          </p>
+          <a class="button button-dark" href="#shop">
+            Shop the drop
+            <span aria-hidden="true">↗</span>
+          </a>
+          <div class="hero-social-proof">
+            <div class="avatar-stack" aria-hidden="true">
+              <span>J</span><span>M</span><span>K</span>
+            </div>
+            <p><strong>12k+</strong> players in the squad</p>
+          </div>
+          <span class="hero-coordinate" aria-hidden="true">N 34°03' / E 118°15'</span>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            class="hero-image"
+            src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
+            alt="Streetwear model wearing a bold, oversized outfit"
+            fetchpriority="high"
+          />
+          <div class="hero-image-shade"></div>
+          <div class="drop-stamp"><span>GG</span><span>DROP<br />NO. 04</span></div>
+          <div class="hero-caption">
+            <span>THE PLAYER ONE COLLECTION</span>
+            <span>001 — 024</span>
+          </div>
+          <span class="hero-scribble" aria-hidden="true">no respawns needed</span>
+        </div>
+      </section>
+
+      <div class="ticker" aria-label="GG Supply — made for the next round">
+        <div class="ticker-track" aria-hidden="true">
+          <span>NO SWEAT, ALL SKILL</span><span>✳</span><span>BUILT DIFFERENT</span><span>✳</span>
+          <span>NO SWEAT, ALL SKILL</span><span>✳</span><span>BUILT DIFFERENT</span><span>✳</span>
+        </div>
+      </div>
+
+      <section class="shop-section section-wrap" id="shop" aria-labelledby="shop-title">
+        <div class="section-heading" data-scroll-reveal>
+          <div>
+            <div class="eyebrow">YOUR NEW GO-TO GEAR</div>
+            <h2 id="shop-title">The drop<span class="lime-period">.</span></h2>
+          </div>
+          <p>Made for match point.<br />Styled for every point after.</p>
+        </div>
+
+        <div class="shop-toolbar">
+          <div class="filter-list" role="group" aria-label="Filter products">
+            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All gear <span>06</span></button>
+            <button class="filter-button" type="button" data-filter="jerseys" aria-pressed="false">Jerseys</button>
+            <button class="filter-button" type="button" data-filter="tops" aria-pressed="false">Tops</button>
+            <button class="filter-button" type="button" data-filter="accessories" aria-pressed="false">Accessories</button>
+          </div>
+          <label class="catalog-search">
+            <span class="sr-only">Search products</span>
+            <input type="search" data-product-search placeholder="Search gear…" autocomplete="off" />
+            <span class="catalog-search-icon" aria-hidden="true">⌕</span>
+          </label>
+          <span class="product-count"><span id="visible-count">06</span> ITEMS</span>
+        </div>
+        <p class="catalog-search-message" role="status" aria-live="polite"></p>
+
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="manifesto" id="story" aria-labelledby="manifesto-title" data-scroll-split>
+        <div class="manifesto-image">
+          <img
+            src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&amp;fit=crop&amp;w=1100&amp;q=85"
+            alt="A curated collection of contemporary streetwear"
+            loading="lazy"
+          />
+          <span class="image-label">PLAY / REPEAT / REPEAT</span>
+        </div>
+        <div class="manifesto-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> OFF THE CLOCK. STILL ON.</div>
+          <h2 id="manifesto-title">For the game<br />and the <span>after.</span></h2>
+          <p>
+            We make the uniform for people who play by their own rules. Good fabrics,
+            easy fits, and a little extra main-character energy.
+          </p>
+          <a class="text-link" href="#shop">Meet your new uniform <span aria-hidden="true">↗</span></a>
+          <span class="manifesto-index" aria-hidden="true">GG / 2025</span>
+        </div>
+      </section>
+
+      <section class="newsletter section-wrap" aria-labelledby="newsletter-title" data-scroll-split>
+        <div>
+          <div class="eyebrow">GOOD THINGS IN YOUR INBOX</div>
+          <h2 id="newsletter-title">Be first. Be <span>in.</span></h2>
+          <p>Drop alerts, early access, and zero spam. Promise.</p>
+        </div>
+        <form class="newsletter-form">
+          <label class="sr-only" for="email-address">Your email address</label>
+          <input id="email-address" name="email" type="email" placeholder="Your email address" required />
+          <button type="submit" aria-label="Subscribe to the newsletter">Count me in <span aria-hidden="true">↗</span></button>
+          <p class="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="#" aria-label="GG Supply home">
+        <span class="wordmark-icon" aria-hidden="true">GG</span>
+        <span class="wordmark-name">SUPPLY<span class="wordmark-period">.</span></span>
+      </a>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="/shop">Shop</a>
+        <a href="/orders">Orders</a>
+        <a href="/account">Account</a>
+      </nav>
+      <p>Good game. Great fit. © <span id="current-year"></span> GG Supply.</p>
+      <a class="back-to-top" href="#">Back to top ↑</a>
+    </footer>
+
+    <div class="drawer-backdrop" hidden></div>
+    <aside class="cart-drawer" aria-labelledby="cart-title" aria-hidden="true" inert hidden data-player-only>
+      <div class="cart-header">
+        <div>
+          <span class="eyebrow">THE GOOD STUFF</span>
+          <h2 id="cart-title">Your bag<span class="lime-period">.</span></h2>
+        </div>
+        <button class="cart-close" type="button" aria-label="Close shopping bag">×</button>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-empty">
+        <span aria-hidden="true">✳</span>
+        <p>Your next favorite fit is waiting.</p>
+        <button class="button button-dark continue-shopping" type="button">Go to the drop ↗</button>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-subtotal"><span>Subtotal</span><strong>0 ₫</strong></div>
+        <p>Shipping fees will be confirmed by the store after your order.</p>
+        <button class="checkout-button" type="button">Checkout <span aria-hidden="true">↗</span></button>
+      </div>
+    </aside>
+    <dialog class="checkout-dialog" aria-labelledby="checkout-title">
+      <form class="checkout-form">
+        <div class="checkout-heading">
+          <div>
+            <span class="eyebrow">ALMOST YOURS</span>
+            <h2 id="checkout-title">Delivery & payment<span class="lime-period">.</span></h2>
+          </div>
+          <button class="checkout-cancel checkout-close" type="button" aria-label="Close checkout">×</button>
+        </div>
+        <p class="checkout-total">Order total <strong>0 ₫</strong></p>
+        <fieldset class="checkout-fieldset">
+          <legend>Delivery address</legend>
+          <div class="checkout-fields">
+            <label>Recipient name<input name="name" autocomplete="name" maxlength="100" required /></label>
+            <label>Phone number<input name="phone" type="tel" autocomplete="tel" maxlength="25" required /></label>
+            <label class="checkout-field-wide">Street address<input name="street" autocomplete="street-address" maxlength="200" required /></label>
+            <label>City<input name="city" autocomplete="address-level2" maxlength="100" required /></label>
+            <label>Postal code<input name="postalCode" autocomplete="postal-code" maxlength="20" required /></label>
+            <label class="checkout-field-wide">Country<input name="country" autocomplete="country-name" value="Vietnam" maxlength="100" required /></label>
+          </div>
+        </fieldset>
+        <fieldset class="checkout-fieldset">
+          <legend>Payment method</legend>
+          <label class="checkout-payment-label">Choose how you plan to pay
+            <select name="paymentMethod" required>
+              <option value="">Select a payment method</option>
+              <option value="stripe">Credit/debit card (Stripe — setup required)</option>
+              <option value="bank_transfer">Bank transfer (instructions required)</option>
+              <option value="zalopay">ZaloPay (setup required)</option>
+              <option value="momo">MoMo (setup required)</option>
+            </select>
+          </label>
+          <p class="checkout-payment-notice">Payment processing is not connected yet. Your order will be saved as Pending; do not send payment until the store provides payment instructions.</p>
+        </fieldset>
+        <p class="checkout-error" role="status" aria-live="polite"></p>
+        <div class="checkout-actions">
+          <button class="button button-dark checkout-cancel" type="button">Continue shopping</button>
+          <button class="button checkout-submit" type="submit">Place order <span aria-hidden="true">↗</span></button>
+        </div>
+      </form>
+    </dialog>
+    <div class="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

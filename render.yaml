@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: gg-supply
+    runtime: node
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: MONGODB_URI
+        sync: false
+      - key: ADMIN_EMAILS
+        sync: false
+      - key: ADMIN_SETUP_KEY
+        sync: false

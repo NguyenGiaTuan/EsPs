@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#11120e" />
+    <title>Admin dashboard — GG Supply</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/admin.css" />
+    <script src="/assets/js/admin.js" defer></script>
+  </head>
+  <body class="admin-page">
+    <header class="admin-header">
+      <a class="wordmark" href="/" aria-label="GG Supply storefront">
+        <span class="wordmark-icon" aria-hidden="true">GG</span>
+        <span class="wordmark-name">SUPPLY<span class="wordmark-period">.</span></span>
+      </a>
+      <nav class="admin-route-nav" aria-label="Site navigation">
+        <a href="/">Home</a>
+        <a href="/shop">Shop</a>
+        <a href="/orders">Your orders</a>
+      </nav>
+      <div class="admin-header-actions">
+        <a class="admin-account-link" href="/account">Account</a>
+        <span class="admin-identity"></span>
+        <button class="admin-signout" type="button">Sign out <span aria-hidden="true">↗</span></button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <a class="admin-back-link" href="/">← Back to the storefront</a>
+      <div class="admin-heading">
+        <div>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> GG SUPPLY CONTROL ROOM</span>
+          <h1>Store dashboard<span class="lime-period">.</span></h1>
+        </div>
+        <button class="admin-refresh" type="button">Refresh data ↻</button>
+      </div>
+
+      <section class="admin-products-section" aria-labelledby="admin-products-title">
+        <div class="admin-products-heading">
+          <div>
+            <h2 id="admin-products-title">Products</h2>
+            <p>Add new gear or update what appears in the shop.</p>
+          </div>
+          <button class="admin-add-product" type="button">＋ Add product</button>
+        </div>
+        <p class="admin-product-status" role="status" aria-live="polite"></p>
+        <form class="admin-product-form" hidden>
+          <div class="admin-form-heading">
+            <h3 data-product-form-title>Add a product</h3>
+            <button class="admin-cancel-edit" type="button">Cancel</button>
+          </div>
+          <div class="admin-product-fields">
+            <label>
+              Product name
+              <input name="name" maxlength="100" required />
+            </label>
+            <label>
+              Category
+              <select name="category" required>
+                <option value="Jerseys">Jerseys</option>
+                <option value="Layers">Layers</option>
+                <option value="Tops">Tops</option>
+                <option value="Accessories">Accessories</option>
+              </select>
+            </label>
+            <label>
+              Shop filter
+              <select name="group" required>
+                <option value="jerseys">Jerseys</option>
+                <option value="tops">Tops / Layers</option>
+                <option value="accessories">Accessories</option>
+              </select>
+            </label>
+            <label>
+              Price (VND)
+              <input name="price" type="number" min="1" max="100000000" step="1" required />
+            </label>
+            <label>
+              Product tag <span>(optional)</span>
+              <input name="tag" maxlength="40" />
+            </label>
+            <label>
+              Unsplash photo ID
+              <input name="image" placeholder="photo-1521572163474-6864f9cf17ab" required />
+            </label>
+            <label class="admin-field-wide">
+              Image description
+              <input name="alt" maxlength="250" required />
+            </label>
+            <label class="admin-field-wide">
+              Colors <span>(comma-separated hex values)</span>
+              <input name="colors" placeholder="#20211c, #c1d44c" required />
+            </label>
+          </div>
+          <div class="admin-form-actions">
+            <button class="admin-save-product" type="submit">Save product</button>
+          </div>
+        </form>
+        <label class="admin-search">
+          <span class="sr-only">Search products</span>
+          <input type="search" class="admin-product-search" placeholder="Search products by name, category, or price…" autocomplete="off" />
+          <span aria-hidden="true">⌕</span>
+        </label>
+        <div class="admin-product-list" aria-live="polite"></div>
+        <p class="admin-product-search-message" role="status" aria-live="polite"></p>
+      </section>
+
+      <div class="admin-stats" aria-label="Order summary">
+        <article class="admin-stat">
+          <span>Total orders</span>
+          <strong data-order-count>—</strong>
+        </article>
+        <article class="admin-stat">
+          <span>Pending orders</span>
+          <strong data-pending-count>—</strong>
+        </article>
+        <article class="admin-stat">
+          <span>Sales in order list</span>
+          <strong data-order-total>—</strong>
+        </article>
+      </div>
+
+      <section class="admin-orders-section" aria-labelledby="admin-orders-title">
+        <div class="admin-orders-heading">
+          <h2 id="admin-orders-title">Recent orders</h2>
+          <p>Showing up to the latest 100 orders.</p>
+        </div>
+        <label class="admin-search">
+          <span class="sr-only">Search orders</span>
+          <input type="search" class="admin-order-search" placeholder="Search order ID, customer, item, address, or status…" autocomplete="off" />
+          <span aria-hidden="true">⌕</span>
+        </label>
+        <p class="admin-status" role="status" aria-live="polite">Loading orders…</p>
+        <p class="admin-order-search-message" role="status" aria-live="polite"></p>
+        <div class="admin-table-scroll">
+          <table class="admin-orders-table">
+            <thead>
+              <tr>
+                <th scope="col">Order</th>
+                <th scope="col">Customer</th>
+                <th scope="col">Items</th>
+                <th scope="col">Total</th>
+                <th scope="col">Payment</th>
+                <th scope="col">Deliver to</th>
+                <th scope="col">Status</th>
+                <th scope="col">Placed</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
